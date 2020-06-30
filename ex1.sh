@@ -1,7 +1,5 @@
 #!/bin/bash
  shell_script_updates
-# vou ter muito sucesso na programação.
-=======
-# Eu sou Tryber e...
+# Eu sou Tryber e vou ter muito sucesso na programação.
 master
 echo "Shell Script é demais"
