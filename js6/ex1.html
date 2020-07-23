@@ -57,23 +57,78 @@
   </head>
   <body id='body'>
     <script>
-      var titulo = document.createElement("h1")
-      titulo.setAttribute("id", "title")
-      titulo.setAttribute("body", "body")
+      var titulo = document.createElement("h1");
+      titulo.setAttribute("id", "title");
+      titulo.setAttribute("body", "body");
       document.getElementById('body').appendChild(titulo)
       document.getElementById('title').innerText = 'Exercício 5.2 - JavaScript DOM'
 
-      var div1 = document.createElement("div")
-      div1.setAttribute('class', 'main-content')
+      var div1 = document.createElement("div");
+      div1.setAttribute('class', 'main-content');
       document.getElementById('body').appendChild(div1)
       div1.innerText = "main-content"
 
-      var div1Filha = document.createElement("div")
-      div1Filha.setAttribute('class', 'center-content')
+      var div1Filha = document.createElement("div");
+      div1Filha.setAttribute('class', 'center-content');
       document.querySelector('.main-content').append(div1Filha)
-      div1Filha.innerText = "center-content"
 
+      var textoDivFilha = document.createElement('p');
+      textoDivFilha.setAttribute('id', 'textoDivFilha')
+      document.querySelector('.center-content').appendChild(textoDivFilha)
+      textoDivFilha.innerText = "Algum Texto"
 
+      var div2Filha = document.createElement("div");
+      div2Filha.setAttribute('class', 'left-content')
+      document.querySelector('.main-content').append(div2Filha)
+
+      var div3Filha = document.createElement("div");
+      div3Filha.setAttribute('class', 'right-content')
+      document.querySelector('.main-content').append(div3Filha)
+      
+      var imgFilha2 = document.createElement('img');
+      imgFilha2.src = 'https://picsum.photos/200'
+      imgFilha2.setAttribute('class', 'small-image');
+      document.querySelector('.left-content').appendChild(imgFilha2)
+
+      var listaDiv3 = document.createElement('ul');
+      listaDiv3.setAttribute('class', 'listaDiv3')
+      document.querySelector('.right-content').appendChild(listaDiv3)
+
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Um"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Dois"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Tres"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Quatro"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Cinco"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Seis"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Sete"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Oito"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Nove"
+      var itemLista1 = document.createElement('li');
+      document.querySelector('.listaDiv3').appendChild(itemLista1)
+      itemLista1.innerText = "Dez"
+      
+      for (let i = 0; i < 3 ; i++) {
+        var subTitutlo = document.createElement('h3')
+        document.querySelector('.main-content').appendChild(subTitutlo)
+      }
 
     </script>
   </body>
