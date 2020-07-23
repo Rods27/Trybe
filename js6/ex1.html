@@ -127,8 +127,18 @@
       
       for (let i = 0; i < 3 ; i++) {
         var subTitutlo = document.createElement('h3')
+        subTitutlo.setAttribute('class', 'description')
         document.querySelector('.main-content').appendChild(subTitutlo)
       }
+      
+      document.querySelector('.main-content').removeChild(div2Filha)
+
+      document.querySelector('.right-content').style.marginRight = 'auto';
+
+      document.querySelector('.main-content').style.backgroundColor = 'green';
+
+      document.getElementsByTagName('li')[9].remove(itemLista1);
+      document.getElementsByTagName('li')[8].remove(itemLista1);
 
     </script>
   </body>
