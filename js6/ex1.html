@@ -63,10 +63,17 @@
       document.getElementById('body').appendChild(titulo)
       document.getElementById('title').innerText = 'Exercício 5.2 - JavaScript DOM'
 
-      var div = document.createElement("div")
-      div.setAttribute('class', 'main-content')
-      document.getElementById('body').appendChild(div)
-      
+      var div1 = document.createElement("div")
+      div1.setAttribute('class', 'main-content')
+      document.getElementById('body').appendChild(div1)
+      div1.innerText = "main-content"
+
+      var div1Filha = document.createElement("div")
+      div1Filha.setAttribute('class', 'center-content')
+      document.querySelector('.main-content').append(div1Filha)
+      div1Filha.innerText = "center-content"
+
+
 
     </script>
   </body>
