@@ -55,9 +55,13 @@
       }
     </style>
   </head>
-  <body>
+  <body id='body'>
     <script>
-      // COLOQUE SEU CÓDIGO AQUI.fdsf4ds654f65ds4f65ds465
+      var titulo = document.createElement("h1")
+      titulo.setAttribute("id", "title")
+      titulo.setAttribute("body", "body")
+      document.getElementById('body').appendChild(titulo)
+      document.getElementById('title').innerText = 'Exercício 5.2 - JavaScript DOM'
     </script>
   </body>
 </html>
