@@ -1,0 +1,40 @@
+Mad Libs
+Start with this webpage, which has several input elements and a button:
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+  
+ <div id="story"></div>
+
+  <script>
+      const botao = document.querySelector('#lib-button')
+      const nome = document.querySelector('#noun')
+      const adjetivo = document.querySelector('#adjective')
+      const nomeOutraPessoa = document.querySelector('#person')
+      const historia = document.querySelector('#story')
+
+      botao.addEventListener('click', function(){
+        historia.innerText += nome.value;
+        historia.innerText += adjetivo.value;
+        historia.innerText += nomeOutraPessoa.value;
+      })
+      
+
+  </script>
+ </body>
+</html>
+
