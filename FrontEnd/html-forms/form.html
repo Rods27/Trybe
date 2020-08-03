@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+​
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Formulário</title>
+</head>
+​
+<body>
+  <form action="form.html" method="GET">
+    <fieldset name="Dados Pessoais" value="">
+      <legend>Dados Pessoais</legend>
+      <div class="form-item">
+        <label for="full-name">Nome</label>
+        <input type="text" name="name" id="full-name" maxlength="40" required="required">
+      </div>
+      <div class="form-item">
+        <label for="e-mail">Email</label>
+        <input type="email" name="email" id="e-mail" maxlength="50" required="required"
+          placeholder="email@email.com.br">
+      </div>
+      <div class="form-item">
+        <label for="cpf">CPF</label>
+        <input type="text" name="CPF" maxlength="11" required="required" placeholder="12345678900" id="cpf">
+      </div>
+      <div class="form-item">
+        <label for="address">Endereço</label>
+        <input type="text" name="endereco" maxlength="200" required="required" id="address">
+      </div>
+      <div class="form-item">
+        <label for="city">Cidade</label>
+        <input type="text" name="cidade" maxlength="28" required="required" id="city">
+      </div>
+      <div class="form-item">
+        <label for="states">Estado</label>
+        <select name="Estado" id="states" name="estados">
+          <option value="" selected="selected">Selecione</option>
+        </select>
+      </div>
+      <div class="form-item">
+        <label>Tipo de Moradia</label><br>
+        <input type="radio" name="moradia" id="apartamento">
+        <label for="apartamento">Apartamento</label>
+        <input type="radio" name="moradia" id="casa">
+        <label for="casa">Casa</label>
+      </div>
+    </fieldset>
+    <fieldset name="Ultimo Emprego" value="">
+      <legend>Sobre o Último Emprego</legend>
+      <div class="form-item">
+        <label for="resumo">Resumo do Currículo</label><br>
+        <textarea name="Resumo" id="resumo" cols="30" rows="10" maxlength="1000" required="required"></textarea>
+      </div>
+      <div class="form-item">
+        <label for="position">Cargo</label>
+        <input type="text" name="cargo" id="position" maxlength="40" required="required">
+      </div>
+      <div class="form-item">
+        <label for="desc-position">Descrição do Cargo</label>
+        <input type="text" id="desc-position" name="desc-cargo" maxlength="500" required="required">
+      </div>
+      <div class="form-item">
+        <label for="start-date">Data de Início</label>
+        <input type="date" name="data-inicio" id="start-date" required="required">
+      </div>
+    </fieldset>
+    <button type="submit" onclick="criarCurriculo()">Criar</button>
+  </form>
+  <div id="curriculo"></div>
+  <script src="script.js"></script>
+</body>
+​
+</html>
