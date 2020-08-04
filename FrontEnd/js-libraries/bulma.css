@@ -9,7 +9,11 @@ body {
 }
 
 input{
-    margin-left: 2px;
+    margin-left: 5px;
+}
+
+select{
+    margin-left: 5px;
 }
 
 .textarea{
@@ -32,3 +36,4 @@ input{
 .message-header{
     border-radius: 5px;
 }
+
