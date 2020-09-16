@@ -1,0 +1,14 @@
+
+.bla{
+  color: crimson;
+  font-weight: 600;
+  text-align: center;
+}
+
+.div{
+  background: rgba(231, 230, 230, 0.418);
+  border: solid black 3px;
+  margin-top: 130px;
+  width: 300px;
+  height: 100px;
+}

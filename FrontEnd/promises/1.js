@@ -7,14 +7,14 @@ async function verifiedFetch(url) {
       .then((r) => r.json())
       .then((r) => (r.value));
   }
-  throw new Error('endpoint não existe');
+  throw new Error('endpoint não existe')
 };
 
 async function sendJokeToFriend(name) {
   const message = await verifiedFetch('https://api.chucknorris.io/jokes/random?category=dev')
     .then((joke) => `Oi ${name}, ouve essa: ${joke}`)
     .catch((err) => err);
-    console.log(message)
+  console.log(message)
 }
 
 sendJokeToFriend("Anna")
