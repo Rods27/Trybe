@@ -1,26 +1,59 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from 'react'
+import EstadoFavorito from './EstadoFavorito'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class Form extends Component {
+  constructor() {
+    super();
+
+    this.handleChange = this.handleChange.bind(this);
+
+    this.state = {
+      email: '',
+      estadoFavorito: '',
+      idade: '',
+      nome: '',
+      vaiComparecer: false
+    };
+  }
+
+
+  handleChange({ target }) {
+    const { name } = target
+    const value = target.type === 'checkbox' ? target.checked : target.value
+    this.setState({
+      [name]: value
+    });
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Estados e React - Tecnologia fantástica ou reagindo a regionalismos?</h2>
+        <form className="form">
+          <fieldset>
+            <EstadoFavorito value={this.state.estadoFavorito} handleChange={this.handleChange} />
+            <label>
+            <p>Email</p>
+              <input name="email" type="email" value={this.state.email} onChange={this.handleChange} />
+            </label>
+            
+            <label>
+            <p>Nome</p>
+              <input name="nome" type="nome" value={this.state.nome} onChange={this.handleChange} />
+            </label>
+            <label>
+              <p>Idade</p>
+            <input type="number" name="idade" value={this.state.idade} onChange={this.handleChange} />
+            </label>
+            <label>
+              <p>Vai comparecer?</p>
+              <input type="checkbox" name="vaiComparecer" value={this.state.vaiComparecer} onChange={this.handleChange}/>
+            </label>
+          </fieldset>
+        </form>
+      </div>
+    );
+  }
 }
 
-export default App;
+export default Form;

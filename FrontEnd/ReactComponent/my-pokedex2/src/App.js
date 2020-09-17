@@ -9,25 +9,30 @@ class App extends React.Component{
     super()
     this.handleClick = this.handleClick.bind(this)
     this.state = {
-      pokemon : ""
+      pokemon : undefined
     }
   }
 
-  handleClick() {
-    this.setState((estadoAnterior) => ({
-      pokemon: pokemons.filter(pokemon => pokemon.type === 'Fire')[0]
-    }))
-    console.log(this.state)
+  handleClick({ target }) {
+    this.setState( {pokemon: target.value} )
   }
-
+  
   render () {
-    console.log(this.state)
     return (
       <div className="container">
         <h1 className="central-text">Pokedex</h1>
-        {pokemons.map(pokemon => <Pokedex name={pokemon.name} type={pokemon.type} averageWeight={pokemon.averageWeight} image={pokemon.image}/>)}
+        {pokemons.filter(pokemon => (pokemon.type === this.state.pokemon))
+        .map(pokemon => <Pokedex name={pokemon.name} type={pokemon.type} averageWeight={pokemon.averageWeight} image={pokemon.image}/>)}
+        {/* {pokemons.map(pokemon => <Pokedex name={pokemon.name} type={pokemon.type} averageWeight={pokemon.averageWeight} image={pokemon.image}/>)} */}
         <div className="filter-div">
-          <button onClick={this.handleClick}>Fire</button>
+          <button onClick={this.handleClick} value="All">All</button>
+          <button onClick={this.handleClick} value="Electric">Electric</button>
+          <button onClick={this.handleClick} value="Fire">Fire</button>
+          <button onClick={this.handleClick} value="Bug">Bug</button>
+          <button onClick={this.handleClick} value="Poison">Poison</button>
+          <button onClick={this.handleClick} value="Psychic">Psychic</button>
+          <button onClick={this.handleClick} value="Normal">Normal</button>
+          <button onClick={this.handleClick} value="Dragon">Dragon</button>
         </div>
       </div>
     );
