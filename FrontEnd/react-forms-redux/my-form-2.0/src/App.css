@@ -1,0 +1,22 @@
+body{
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+h1{
+  text-align: center;
+}
+
+fieldset {
+  background-color: rgb(245, 245, 245);
+  width: 800px;
+  margin-bottom: 25px;
+}
+
+textarea{
+  max-width: 780px;
+  max-height: 135px;
+  margin-bottom: 10px;
+}
+
